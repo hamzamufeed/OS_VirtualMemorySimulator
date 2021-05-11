@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="780.0" style="-fx-background-color: #576364;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <ImageView fitHeight="572.0" fitWidth="794.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true" />
+      <TreeTableView fx:id="table" editable="true" layoutX="38.0" layoutY="82.0" prefHeight="424.0" prefWidth="186.0" style="-fx-border-color: #00FFCF; -fx-background-color: #BEBCBC;">
+        <columns>
+          <TreeTableColumn fx:id="process_name" prefWidth="120.79994201660156" text="Process Name" />
+          <TreeTableColumn fx:id="process_id" prefWidth="63.199951171875" text="PID" />
+        </columns>
+      </TreeTableView>
+      <Button fx:id="start_button" layoutX="38.0" layoutY="13.0" mnemonicParsing="false" onAction="#Start" prefHeight="26.0" prefWidth="78.0" style="-fx-background-radius: 90; -fx-background-color: #00FFCF;" text="Start" />
+      <Button fx:id="run_button" layoutX="333.0" layoutY="27.0" mnemonicParsing="false" onAction="#run" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #00FFCF; -fx-background-radius: 90;" text="Run Test" />
+      <ComboBox fx:id="algorithm" layoutX="131.0" layoutY="27.0" prefHeight="27.0" prefWidth="162.0" promptText="-- Select Algorithm -- " style="-fx-background-radius: 90; -fx-border-color: #00FFCF; -fx-border-radius: 90;" />
+      <TextArea fx:id="text" editable="false" layoutX="239.0" layoutY="82.0" prefHeight="384.0" prefWidth="527.0" style="-fx-border-color: #00FFCF; -fx-background-color: #BEBCBC;" wrapText="true" />
+      <Button fx:id="clear_button" layoutX="500.0" layoutY="521.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #00FFCF; -fx-background-radius: 90;" text="Clear" />
+      <Button fx:id="restart_button" layoutX="592.0" layoutY="521.0" mnemonicParsing="false" onAction="#restart" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #00FFCF; -fx-background-radius: 90;" text="Restart" />
+      <TextField fx:id="total" editable="false" layoutX="362.0" layoutY="478.0" prefHeight="26.0" prefWidth="63.0" style="-fx-background-radius: 90; -fx-border-color: #00FFCF; -fx-border-radius: 90;" />
+      <Label layoutX="240.0" layoutY="479.0" prefHeight="26.0" prefWidth="120.0" text="Total Disk Accesses" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="exit_button" layoutX="680.0" layoutY="521.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #00FFCF; -fx-background-radius: 90;" text="Exit" />
+      <CheckBox fx:id="fifo" layoutX="428.0" layoutY="5.0" mnemonicParsing="false" style="-fx-background-radius: 90;" text="FIFO" textFill="WHITE" />
+      <CheckBox fx:id="lru" layoutX="429.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-radius: 90;" text="LRU" textFill="WHITE" />
+      <CheckBox fx:id="optimal" layoutX="429.0" layoutY="54.0" mnemonicParsing="false" style="-fx-background-radius: 90;" text="Optimal" textFill="WHITE" />
+      <Button fx:id="memory_button" layoutX="38.0" layoutY="521.0" mnemonicParsing="false" onAction="#show_memory" prefHeight="26.0" prefWidth="120.0" style="-fx-background-radius: 90; -fx-background-color: #00FFCF;" text="Show Memory" />
+      <Button fx:id="process_details" layoutX="173.0" layoutY="521.0" mnemonicParsing="false" onAction="#show_details" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: #00FFCF; -fx-background-radius: 90;" text="Show Process Details" />
+      <Button fx:id="generate_button" layoutX="631.0" layoutY="41.0" mnemonicParsing="false" onAction="#generate" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #00FFCF; -fx-background-radius: 90;" text="Generate File" />
+      <Button fx:id="browse_button" layoutX="631.0" layoutY="11.0" mnemonicParsing="false" onAction="#browse" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #00FFCF; -fx-background-radius: 90;" text="Browse File" />
+      <ProgressBar fx:id="progress_bar" layoutX="240.0" layoutY="457.0" prefHeight="18.0" prefWidth="527.0" progress="1.0" />
+      <Button fx:id="interrupt_button" layoutX="38.0" layoutY="43.0" mnemonicParsing="false" onAction="#interrupt" prefHeight="26.0" prefWidth="78.0" style="-fx-background-radius: 90; -fx-background-color: #00FFCF;" text="Interrupt" />
+      <TextField fx:id="total_hits" editable="false" layoutX="525.0" layoutY="478.0" prefHeight="26.0" prefWidth="63.0" style="-fx-background-radius: 90; -fx-border-color: #00FFCF; -fx-border-radius: 90;" />
+      <Label layoutX="462.0" layoutY="479.0" prefHeight="26.0" prefWidth="63.0" text="Total Hits" textAlignment="CENTER" textFill="WHITE" />
+   </children>
+</AnchorPane>
